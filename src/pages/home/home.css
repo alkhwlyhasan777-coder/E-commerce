@@ -1,0 +1,59 @@
+:root {
+  /* --main-color: #0090f0; */
+  --main-color :linear-gradient(90deg, #702dff, #a77fff) !important;
+
+  --p-color: #7b7b7b;
+  --bg-color: #f3f3f3;
+  --white-color: #ffffff;
+  --color-heading: #253237;
+  --border-color: #d6d6d6d5;
+  --font-heading: "DM Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero{
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: 20px;
+}
+.swiper-slide .content{
+  position: absolute;
+  padding:0 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.swiper-slide .content h4{
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-style: italic ;
+  font-weight: normal;
+  margin-bottom: 0.5vw;
+}
+.swiper-slide .content h3{
+  font-size: 3vw;
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: var(--main-color);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+.swiper-slide .content p{
+  font-size: 1.2vw;
+  margin: 2.5vw  0 ;
+}
+.swiper-pagination-bullet-active{
+  border-radius:15px;
+  width: 30px;
+  transition: .3s ease-in-out;
+}
+/* .swiper-backface-hidden{
+  } */ 
+  /* .swiper-initialized {
+  margin-top: 140px;
+
+} */

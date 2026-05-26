@@ -1,0 +1,100 @@
+:root {
+    /* --main-color: #0090f0; */
+    --main-color :linear-gradient(90deg, #702dff, #a77fff) !important;
+
+    --p-color: #7b7b7b;
+    --bg-color: #f3f3f3;
+    --white-color: #ffffff;
+    --color-heading: #253237;
+    --border-color: #d6d6d6d5;
+    --font-heading: "DM Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+.btn{
+    padding: 10px 15px ;
+    text-transform: capitalize;
+    border: 1px solid;
+    border-radius: 30px;
+    background: var(--main-color);
+    color: var(--white-color);
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: .5s;
+    width: max-content;
+}  
+.btn:hover{
+    scale: 1.1; 
+    background:var(--main-color) ;
+    color: var(--white-color);
+}  
+
+.swiper-button-prev ,
+.swiper-navigation-icon{
+    color: #702dff;
+    font-size: 15px;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+.details-item .icons button.active{
+    background: var(--main-color);
+    color: var(--white-color);
+    transform: translateY(-3px);
+}
+
+
+
+.quantity_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity_box button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.quantity_box button svg{
+    fill: #702dff;
+    font-size: 30px;
+}
+
+.quantity_box button:hover {
+    transform: scale(1.1);
+}
+
+.quantity_box span {
+    font-size: 18px;
+    padding: 5px ;
+    border: 1px solid #726b6b;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.remove_btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: crimson;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    padding: 0;
+}
+
+.remove_btn:hover {
+    transform: scale(1.1);
+}

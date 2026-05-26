@@ -1,0 +1,139 @@
+:root {
+    /* --main-color: #0090f0; */
+    --main-color :linear-gradient(90deg, #702dff, #a77fff) !important;
+    --p-color: #7b7b7b;
+    --bg-color: #f3f3f3;
+    --white-color: #ffffff;
+    --color-heading: #253237;
+    --border-color: #d6d6d6d5;
+    --font-heading: "DM Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+.cart_page {
+    padding: 20px;
+    background: #f4f7fb;
+    min-height: 100vh;
+    
+}
+
+/* ================= TABLE ================= */
+
+table {
+    width: 60%;
+    /* border-collapse: collapse; */
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 7px solid #0090f0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+thead {
+    background: #0090f0;
+    color: white;
+    text-align: center;
+
+}
+
+thead th {
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    /* border: 3px solid; */
+}
+
+/* BODY */
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background: #b6cfe889;
+}
+
+tbody td {
+    padding: 18px;
+    border: 3px solid #6b646447;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* PRODUCT INFO */
+
+.product_info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+}
+
+.product_info img {
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product_text h3 {
+    font-size: 14px;
+    color: #222222;
+
+    font-family: var(--font-heading);
+}
+
+.product_text p {
+    font-size: 14px;
+    color: #777;
+}
+.remove_btn{
+    padding: 0 !important;
+}
+/* FOOTER */
+
+tfoot td {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: #fafafa;
+    color: #0090f0;
+}
+
+/* EMPTY */
+
+.empty_cart {
+    text-align: center;
+    margin-top: 100px;
+    color: #666;
+}
+
+
+/*////////// */
+.product_text {
+    position: relative;
+}
+
+.hover_box {
+    position: absolute;
+    top: -15px;
+    left: 100px;
+    width: 220px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.hover_box p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #0090f0;
+}

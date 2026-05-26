@@ -1,0 +1,208 @@
+/* product */
+:root {
+    /* --main-color: #0090f0; */
+  --main-color :linear-gradient(90deg, #702dff, #a77fff) !important;
+
+    --p-color: #7b7b7b;
+    --bg-color: #f3f3f3;
+    --white-color: #ffffff;
+    --color-heading: #253237;
+    --border-color: #d6d6d6d5;
+    --font-heading: "DM Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+.product{
+    width: 220px;
+    background: var(--white-color);
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s ease;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+        /* add cart */
+.product.in-cart  .icons .btn_cart{
+    background: var(--main-color);
+}
+.product.in-cart  .icons .btn_heart{
+    background: var(--main-color);
+}
+.product.in-cart  .icons .btn_heart svg{
+    color: var(--white-color);
+} 
+.product.in-cart  .icons .btn_cart svg{
+    color: var(--white-color);
+} 
+.btn_cart.active{
+    background: #16c47f;
+    color: #fff;
+    pointer-events: none;
+}
+.status{
+    position: absolute;
+    color: #ffffff;
+    background: var(--main-color);
+    top: -33px;
+    border:  1px solid;
+    padding:2px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    z-index: 3333333333;
+    left: 50%;
+    transition: .4s;
+    transform: translate(-50% , 0);
+}
+.product.in-cart .status{
+    top: 10px;
+}
+.status svg{
+    fill: #ffffff;
+    /* font-size: 23px; */
+}
+
+.product:hover{
+    border-color:  #702df0;
+    box-shadow: 0 10px 20px #00000012;
+    transform: translateY(-5px);
+}
+
+.product a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.product .img_product{
+    position: relative;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.product .img_product img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.product:hover .img_product img{
+    transform: scale(1.05);
+}
+
+.product .name_product{
+    margin-bottom: 10px;
+    color: var(--color-heading);
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.product .stars{
+    margin: 10px 0;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.product .stars svg{
+    fill: #f8d941;
+    font-size: 14px;
+}
+
+.product .price{
+    font-weight: bold;
+    font-size: 22px;
+    color: #702df0;
+}
+
+/* icons */
+
+.product .icons{
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.4s ease;
+    z-index: 10;
+}
+
+.product:hover .icons{
+    right: 10px;
+}
+
+.product .icons span{
+    width: 40px;
+    height: 40px;
+    background: var(--white-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    border: 1px solid var(--border-color);
+
+    transition: 0.3s;
+}
+
+.product .icons span:hover{
+    background: var(--main-color);
+    color: var(--white-color);
+    border-color: var(--main-color);
+}
+
+.product .icons svg{
+    font-size: 20px;
+}
+.details-item .icons button.active{
+    background: var(--main-color);
+    color: var(--white-color);
+    transform: translateY(-3px);
+}
+
+ /* ================  category_product  ================== */
+.category_product , .title_category{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    margin: 0 auto;
+    justify-items: center;
+}
+.title_category{
+    text-transform: capitalize;
+    font-family: var(--font-body);
+    color:#702df0;
+    font-size: 33px;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    border: 3px solid #702df0;
+    border-bottom: 8px double #702df0;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.title_category:hover{
+    background-color: #702df0;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(22, 196, 127, 0.3);
+}

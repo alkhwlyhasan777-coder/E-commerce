@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* ========================================
+    RESET
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ========================================
+    ROOT VARIABLES
+======================================== */
+:root {
+    /* --main-color: #0090f0; */
+    --main-color :linear-gradient(90deg, #702dff, #a77fff) !important;
+    --p-color: #7b7b7b;
+    --bg-color: #f3f3f3;
+    --white-color: #ffffff;
+    --color-heading: #253237;
+    --border-color: #d6d6d6d5;
+    --font-heading: "DM Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+/* ========================================
+    GLOBAL STYLE
+======================================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    background-color: var(--white-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+/* ========================================
+    TYPOGRAPHY
+======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+}
+p {
+    color: var(--p-color);
+}
+span {
+    color: var(--main-color);
+}
+/* ========================================
+    FORM ELEMENTS
+======================================== */
+input,
+button,
+select,
+textarea {
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+/* ========================================
+    LINKS
+======================================== */
+a {
+    text-decoration: none;
+    color: var(--color-heading);
+    transition: 0.3s;
+}
+a:hover {
+    color: var(--main-color);
+}
+/* ========================================
+    CONTAINER
+======================================== */
+.container {
+    width: 90%;
+    max-width: 1350px;
+    margin: auto;
+}
+ /* =============Btn=========== */
+.btn{
+    padding: 10px 15px ;
+    text-transform: capitalize;
+    border: 1px solid;
+    border-radius: 30px;
+    background: var(--main-color);
+    color: var(--white-color);
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: .5s;
+}  
+.btn:hover{
+    scale: 1.1; 
+}  
+
+.load {
+    background: #e2e5e7;
+    border-radius: 100px;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0)
+    );
+
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+    animation: anima 1s infinite;
+}
+
+@keyframes anima {
+    from {
+        background-position: -150px 0;
+    }
+
+    to {
+        background-position: 350px 0;
+    }
+}
+
+.details-item .icons button.active{
+    background: var(--main-color);
+    color: var(--white-color);
+    transform: translateY(-3px);
+}
