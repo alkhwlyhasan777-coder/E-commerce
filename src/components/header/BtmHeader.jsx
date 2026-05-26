@@ -12,8 +12,6 @@ import { FaThList } from "react-icons/fa";
 const NavLink = [
     { title: "Home" , url:"/"},
     { title: "About" , url:"/about"},
-    { title: "Accessories" , url:"/accessories"},
-    { title: "Blog" , url:"/blog"},
     { title: "Contact" , url:"/contact"},
 ]
 function BtnHeader() {
