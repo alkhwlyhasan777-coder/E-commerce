@@ -9,7 +9,7 @@ import HearttCart from "./components/heartCard/HearttCart";
 
 import { AnimatePresence } from "framer-motion";
 import CategoryPage from "./components/cart/categoryPage/CategoryPage";
-import SearchPage from "./pages/search/searchPage";
+import SearchPage from "./pages/search/SearchPage";
 
 function App() {
   return (
