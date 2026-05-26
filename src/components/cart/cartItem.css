@@ -137,3 +137,144 @@ tfoot td {
     font-size: 14px;
     color: #0090f0;
 }
+
+/* =========================
+   Responsive Cart Page
+========================= */
+
+/* Tablet */
+@media (max-width: 992px){
+
+    table{
+        width: 90%;
+    }
+
+    thead th{
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    tbody td{
+        padding: 15px;
+    }
+
+    .product_info img{
+        width: 120px;
+    }
+
+    .hover_box{
+        left: 70px;
+        width: 200px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+    .cart_page{
+        padding: 15px;
+    }
+
+    table{
+        width: 100%;
+        border-width: 4px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    thead th{
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    tbody td{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .product_info{
+        gap: 10px;
+    }
+
+    .product_info img{
+        width: 90px;
+    }
+
+    .product_text h3{
+        font-size: 13px;
+    }
+
+    .product_text p{
+        font-size: 12px;
+    }
+
+    .hover_box{
+        width: 180px;
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%);
+    }
+
+    tfoot td{
+        font-size: 16px;
+        padding: 15px;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width: 576px){
+
+    .cart_page{
+        padding: 10px;
+    }
+
+    table{
+        border-width: 3px;
+        border-radius: 12px;
+    }
+
+    thead th{
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    tbody td{
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .product_info img{
+        width: 70px;
+        border-radius: 8px;
+    }
+
+    .product_text h3{
+        font-size: 12px;
+    }
+
+    .product_text p{
+        font-size: 11px;
+    }
+
+    .hover_box{
+        width: 150px;
+        padding: 8px;
+    }
+
+    .hover_box p{
+        font-size: 12px;
+    }
+
+    tfoot td{
+        font-size: 14px;
+    }
+
+    .empty_cart{
+        margin-top: 60px;
+        font-size: 14px;
+    }
+
+}
