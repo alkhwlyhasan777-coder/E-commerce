@@ -286,3 +286,128 @@ header{
 main{
     padding-top: 120px;
 }
+/* ===============================
+   Responsive Design
+================================ */
+
+/* Tablet */
+@media (max-width: 992px){
+
+    .search_box{
+        width: 350px;
+    }
+
+    .search_box input{
+        width: 280px;
+    }
+
+    .nav_links{
+        gap: 0;
+    }
+
+    .nav_links a{
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .category-nav{
+        width: 220px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+    .content-nav{
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .logo{
+        width: 120px;
+    }
+
+    .search_box{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .search_box input{
+        width: 100%;
+    }
+
+    .header_icon{
+        gap: 20px;
+    }
+
+    .content-btm_header{
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .category-nav{
+        width: auto;
+    }
+
+    .nav_links-mobile{
+        width: 220px;
+        left: 0;
+        top: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        z-index: 999999;
+    }
+
+    .category-nav .category_nav_list{
+        width: 220px;
+        z-index: 999999;
+    }
+
+    .sign-regst{
+        gap: 15px;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width: 576px){
+
+    .search_box{
+        height: 45px;
+        padding-left: 10px;
+    }
+
+    .search_box input{
+        font-size: 14px;
+    }
+
+    .search_box button{
+        width: 45px;
+        font-size: 20px;
+    }
+
+    .header_icon .icon{
+        font-size: 24px;
+    }
+
+    .header_icon .icon span{
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+    }
+
+    .category-nav .category_nav_list{
+        width: 180px;
+    }
+
+    .nav_links-mobile{
+        width: 180px;
+    }
+
+    main{
+        padding-top: 140px;
+    }
+
+}

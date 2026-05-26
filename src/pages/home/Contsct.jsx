@@ -26,7 +26,7 @@ function Contact() {
 
                             <div>
                                 <h3>Phone</h3>
-                                <p>+20 100 000 0000</p>
+                                <p>01127846533</p>
                             </div>
                         </div>
 
@@ -35,7 +35,7 @@ function Contact() {
 
                             <div>
                                 <h3>Email</h3>
-                                <p>store@gmail.com</p>
+                                <p>alkhwlyhasan777@agmail.com</p>
                             </div>
                         </div>
 
