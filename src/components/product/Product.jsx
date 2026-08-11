@@ -1,16 +1,17 @@
 import {
     FaStar,
     FaShare,
-    FaCartShopping,
+    // FaCartShopping,
 } from "react-icons/fa6";
-import { IoCartOutline } from "react-icons/io5";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 import {
     FaStarHalfAlt,
     FaCheck,
 } from "react-icons/fa";
 
 import { CiHeart } from "react-icons/ci";
-
+import './product.css'
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { useContext, useState } from "react";
@@ -90,7 +91,7 @@ function Product({ item = {} }) {
                         toggleCart(item)
                     }
                     >
-                    <IoCartOutline />
+                    <AiOutlineShoppingCart id="item_card" />
                 </span>
                 <span
                     className={`btn_hear ${inHeart ? "active" : ""}`}

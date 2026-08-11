@@ -12,7 +12,8 @@ import CategoryPage from "./components/cart/categoryPage/CategoryPage";
 import SearchPage from "./pages/search/SearchPage";
 import About from "./pages/home/About";
 import Contact from "./pages/home/Contsct";
-
+import Login from "./pages/login";
+import Register from "./pages/register";
 function App() {
   return (
     <>
@@ -25,6 +26,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/pages/login" element={<Login />} />
+          <Route path="/pages/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<CartItem />} />

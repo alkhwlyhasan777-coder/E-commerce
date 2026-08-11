@@ -1,110 +1,49 @@
-// import { useContext } from "react"
-
-// import { CartContext } from "../context/CartContext"
-// import './heart.css'
-
-// function HearttCart() {
-//     console.log("Heart Page")
-//     const { heartItem } = useContext(CartContext)
-//         console.log(heartItem);
-        
-//     return (
-
-//         <div className="cart_page">
-
-//             <div style={{ height: "150px" }}></div>
-
-//             {heartItem.length > 0 ? (
-
-//                 heartItem.map((item) => (
-
-//                     <div key={item.id} className="cart_item">
-
-//                         <img
-//                             src={item.thumbnail}
-//                             alt={item.title}
-//                             width="100"
-//                         />
-
-//                         <div>
-//                             <h3>{item.title}</h3>
-//                             <p>${item.price}</p>
-//                         </div>
-
-//                     </div>
-//                 ))
-
-//             ) : (
-
-//                 <h2>Your favorite is empty</h2>
-
-//             )}
-
-//         </div>
-//     )
-// }
-
-// export default HearttCart
-
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { FiShoppingBag } from "react-icons/fi";
+import { CiHeart } from "react-icons/ci";
 import "./heart.css";
-
+// import { div } from "framer-motion/client";
 function HearttCart() {
-
-    const { heartItem, toggleHeart } =
-        useContext(CartContext);
-
+    const { heartItem, toggleHeart } = useContext(CartContext);
     return (
-
         <div className="cart_page">
+            <div style={{ height: "120px" }} />
+            <div>
+                <h2>My Favorites</h2>
+                <p>Products you've added to your favorites</p>
+            </div>
+            {heartItem.length > 0 ? (
+                <div className="headrCard-container">
+                    {heartItem.map((item) => (
+                        <div key={item.id} className="cart_item">
+                            <div className="heart_icon">
+                            <CiHeart className="heart_icon_img"/>
 
-            <div style={{ height: "150px" }} />
-
-            {
-                heartItem.length > 0 ? (
-
-                    heartItem.map((item) => (
-
-                        <div
-                            key={item.id}
-                            className="cart_item"
-                        >
-
+                            </div>
                             <img
                                 src={item.thumbnail}
                                 alt={item.title}
-                                width="100"
+                                className="cart-item-image"
                             />
 
-                            <div>
-
+                            <div className="cart-item-content">
                                 <h3>{item.title}</h3>
-
                                 <p>${item.price}</p>
 
-                                <button
-                                    onClick={() =>
-                                        toggleHeart(item)
-                                    }
-                                >
+                                <button onClick={() => toggleHeart(item)}>
                                     Remove
                                 </button>
-
                             </div>
-
                         </div>
-                    ))
-
-                ) : (
-
-                    <h2>
-                        Your favorite is empty
-                    </h2>
-
-                )
-            }
-
+                    ))}
+                </div>
+            ) : (
+                <div className="heart_icone">
+                    <FiShoppingBag className="shopping" />
+                    <h2>Your favorite is empty</h2>
+                </div>
+            )}
         </div>
     );
 }

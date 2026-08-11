@@ -1,46 +1,104 @@
-
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Product from "../../components/product/Product";
 
 function SearchPage() {
-    const [productResults , setProductResults] = useState([])
+    const [productResults, setProductResults] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     const location = useLocation();
+
     const query = new URLSearchParams(location.search).get("q");
-    console.log(location.search);
-    console.log(query);
+
+
     useEffect(() => {
-        const results = async () => {
+
+        if (!query) return;
+
+
+        const getProducts = async () => {
+
             try {
+
+                setLoading(true);
+
                 const response = await fetch(
-                    `https://dummyjson.com/products/search?q=${query}`
+                    "https://dummyjson.com/products?limit=0"
                 );
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch products");
+                }
+
                 const data = await response.json();
-                setProductResults(data.products || []);
+
+
+                const filteredProducts = data.products.filter(
+                    (product) =>
+                        product.title
+                            .toLowerCase()
+                            .startsWith(query.toLowerCase())
+                );
+
+
+                setProductResults(filteredProducts);
+
             } catch (error) {
+
                 console.error(error);
+
+                setProductResults([]);
+
             } finally {
-                // setProductResults(false)
+
+                setLoading(false);
+
             }
         };
-        if(query)results();
+
+
+        getProducts();
+
     }, [query]);
 
-console.log(productResults)
+
     return (
         <>
             <div style={{ height: "150px" }} />
-            <div>
-            </div>
+
             <div className="category">
-                <div><h2 className="title_category">
-                Search results for {query}  ({productResults.length})
-                </h2></div>
-                <div className="category_product">
-                    {productResults.map((item, index) => (
-                        <Product key={index} item={item} />
-                    ))}
-                </div>
+
+                <h2 className="title_category">
+                    Search results for "{query}"
+                    ({productResults.length})
+                </h2>
+
+
+                {loading ? (
+
+                    <p>Loading...</p>
+
+                ) : productResults.length === 0 ? (
+
+                    <p>
+                        No products found starting with "{query}"
+                    </p>
+
+                ) : (
+
+                    <div className="category_product">
+
+                        {productResults.map((item) => (
+                            <Product
+                                key={item.id}
+                                item={item}
+                            />
+                        ))}
+
+                    </div>
+
+                )}
+
             </div>
         </>
     );

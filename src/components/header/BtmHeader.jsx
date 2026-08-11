@@ -10,9 +10,11 @@ import { PiSignIn } from "react-icons/pi";
 import { FaUserPlus } from "react-icons/fa";
 import { FaThList } from "react-icons/fa";
 const NavLink = [
-    { title: "Home" , url:"/"},
-    { title: "About" , url:"/about"},
+    { title: "Home" ,    url:"/"},
+    { title: "About" ,   url:"/about"},
     { title: "Contact" , url:"/contact"},
+    // { title: "Login" ,  url :"/login"}
+
 ]
 function BtnHeader() {
     //useLocation
@@ -70,16 +72,6 @@ function BtnHeader() {
                                     {link.title}
                                 </Link>
                             ))} 
-                            {/* {NavLink.map(link => (
-                                <Link
-                                    className={
-                                        location.pathname === link.url ? "active" : ""
-                                    }
-                                    to={link.url}
-                                >
-                                    {link.title}
-                                </Link>
-                            ))} */}
                         </div>
                         <div className={ `nav_links-mobile ${!listNav ? "active" : ""}`}>
                             
@@ -99,8 +91,8 @@ function BtnHeader() {
                         </Link>
                     </nav>
                     <div className="sign-regst d-flex">
-                        <Link to="/"><PiSignIn/></Link>
-                        <Link to="/"><FaUserPlus /> </Link>
+                        <Link to="../../pages/login"><PiSignIn/></Link>
+                        <Link to="../../pages/register"><FaUserPlus /> </Link>
                     </div>
                 </div>
             </div>

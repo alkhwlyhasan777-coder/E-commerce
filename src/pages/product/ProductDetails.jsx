@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import "./productDetails.css";
 import "../../components/product/product.css";
 // Icons
-import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { FaShare } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
@@ -238,8 +237,6 @@ function ProductDetails() {
                                 <p className="description">
                                     {product.description}
                                 </p>
-
-                                {/* Stock */}
                                 <p className="stock">
                                     Hurry up! only
                                     <span>
@@ -251,9 +248,8 @@ function ProductDetails() {
 
                                 {/* Add To Cart */}
                                 <button
-                                    className={`btn ${
-                                        inCart ? "active" : ""
-                                    }`}
+                                    className={`btn ${inCart ? "active" : ""
+                                        }`}
                                     onClick={() =>
                                         toggleCart(product)
                                     }
@@ -270,11 +266,10 @@ function ProductDetails() {
 
                                     {/* Heart */}
                                     <button
-                                        className={`box ${
-                                            inHeart
+                                        className={`box ${inHeart
                                                 ? "active"
                                                 : ""
-                                        }`}
+                                            }`}
                                         onClick={() =>
                                             toggleHeart(product)
                                         }
@@ -284,11 +279,10 @@ function ProductDetails() {
 
                                     {/* Share */}
                                     <button
-                                        className={`box ${
-                                            shared
+                                        className={`box ${shared
                                                 ? "active"
                                                 : ""
-                                        }`}
+                                            }`}
                                         onClick={toggleShare}
                                     >
                                         <FaShare />
@@ -306,7 +300,7 @@ function ProductDetails() {
                         data={relatedProduct}
                         title={
                             product?.category?.replace(
-                                "-" ,  " "
+                                "-", " "
                             ) || "Related Products"
                         }
                     />
