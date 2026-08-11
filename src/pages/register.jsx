@@ -11,7 +11,6 @@ import {
   IoArrowForwardOutline,
 } from "react-icons/io5";
 
-import "./Register.css";
 
 function Register() {
 
