@@ -6,37 +6,37 @@ function CartProvider({ children }) {
     const [cartItem, setCartItem] = useState(() => {
 
         const savedCart = localStorage.getItem("cart");
-    
+
         return savedCart
             ? JSON.parse(savedCart)
             : [];
-    
+
     });
 
     useEffect(() => {
         try {
-    
+
             localStorage.setItem(
                 "cart",
                 JSON.stringify(cartItem)
             );
-    
+
         } catch (error) {
-    
+
             console.log("LocalStorage Error:", error);
-    
+
         }
     }, [cartItem]);
-    
+
     // HEART
     const [heartItem, setHeartItem] = useState(() => {
 
         const savedHeart = localStorage.getItem("heart");
-    
+
         return savedHeart
             ? JSON.parse(savedHeart)
             : [];
-    
+
     });
     useEffect(() => {
 
@@ -44,7 +44,7 @@ function CartProvider({ children }) {
             "heart",
             JSON.stringify(heartItem)
         );
-    
+
     }, [heartItem]);
     // ================= CART =================
     // ADD TO CART

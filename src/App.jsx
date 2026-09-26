@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import ProductDetails from "./pages/product/ProductDetails";
 import CartItem from "./components/cart/CartItem";
 import HearttCart from "./components/heartCard/HearttCart";
-
+// import Checkout from "./pages/Checkout";
 import { AnimatePresence } from "framer-motion";
 import CategoryPage from "./components/cart/categoryPage/CategoryPage";
 import SearchPage from "./pages/search/SearchPage";
@@ -34,6 +34,7 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/heartCart" element={<HearttCart />} />
           <Route path="/category/:category" element={<CategoryPage/>} />
+          {/* <Route path="/checkout" element={<Checkout />} /> */}
         </Routes>
       </AnimatePresence>
     </>
